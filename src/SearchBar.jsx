@@ -8,6 +8,7 @@ export default function SearchBar(props) {
         search,
         setSearch,
         setShowResults,
+        setMetadata,
         setIsMetadataLoading,
         setIsMetadataAvailable
     } = props;
@@ -27,6 +28,8 @@ export default function SearchBar(props) {
 
             if (response.status == 200) {
                 setIsMetadataAvailable(true);
+                setMetadata(response.data);
+                
             } else {
                 setIsMetadataAvailable(false);
             }

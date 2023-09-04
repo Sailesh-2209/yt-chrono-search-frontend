@@ -21,11 +21,13 @@ export default function App() {
 				search={search}
 				setSearch={setSearch}
 				setShowResults={setShowResults}
+				setMetadata={setMetadata}
 				setIsMetadataLoading={setIsMetadataLoading}
 				setIsMetadataAvailable={setIsMetadataAvailable}
 			/>
 			<Metadata
 				showResults={showResults}
+				metadata={metadata}
 				isMetadataLoading={isMetadataLoading}
 				isMetadataAvailable={isMetadataAvailable}
 			/>
