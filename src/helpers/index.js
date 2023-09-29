@@ -23,3 +23,14 @@ export const formatNumber = (val) => {
         return (num.toString() + " M");
     }
 }
+
+export const formatDate = (val) => {
+    const dateTime = new Date(val);
+    const options = {
+        year: 'numeric',
+        month: 'short',
+        day: 'numeric'
+    };
+
+    return dateTime.toLocaleDateString(undefined, options);
+}
